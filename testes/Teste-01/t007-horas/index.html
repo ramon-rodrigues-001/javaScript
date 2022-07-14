@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        button {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora certa</h1>
+    Que horas são: <input type="number" name="input" id="input"> <br>
+    <button onclick="clicar()">Confirmar</button>
+    <div id="res">
+
+    </div>
+    <script>
+        var res = document.body.querySelector('div#res')
+        function clicar() {
+            var hr = document.body.querySelector('input#input')
+            var hora = Number(hr.value)
+            if (hora <= 6) {
+                res.innerHTML = `Boa Manha`
+            }
+            else if (hora < 12) {
+                res.innerHTML = `Bom Dia`
+            }
+            else if (hora < 17) {
+                res.innerHTML = `Boa Tarde`
+            }
+            else {
+                res.innerHTML = `Boa Noite`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior e Menor</title>
+    <style>
+        #container {
+            margin: auto;
+            text-align: center;
+        }
+        #butao {
+            margin: 15px;
+        }
+        input {
+            width: 100px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Maior e Menor Valores</h1>
+        <input type="number" name="num" id="num-1">
+        <input type="number" name="num" id="num-2">
+        <input type="number" name="num" id="num-3"> <br>
+        <button id="butao"><strong>Confirmar...</strong></button> <br>
+    </div>
+    <script>
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+        
+        function clicar() {
+            var num1 = document.body.querySelector('input#num-1')
+            var num2 = document.body.querySelector('input#num-2')
+            var num3 = document.body.querySelector('input#num-3')
+
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var n3 = Number(num3.value)
+            
+            var corpo = document.body.querySelector('div#container')
+            var menor = n1
+            var maior = n1
+
+            if (n2 > maior) {
+                maior = n2
+            }
+            if (n3 > maior) {
+                maior = n3
+            }
+            if (n2 < menor) {
+                menor = n2
+            }
+            if (n3 < menor) {
+                menor = n3
+            }
+            
+            corpo.innerHTML += `<strong>O maior valor é ${maior} <br>E o menor Valor é ${menor}</strong>`
+        }
+    </script>
+</body>
+</html>

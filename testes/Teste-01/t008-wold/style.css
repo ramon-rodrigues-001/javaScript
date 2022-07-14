@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input#input-txt-01 {
+    margin-top: 50px;
+}
+
+body {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+div {
+    background-color: rgb(157, 157, 162);
+    position: relative;
+    margin: 50px auto;
+    width: 150px;
+    height: 150px;
+}
+div h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

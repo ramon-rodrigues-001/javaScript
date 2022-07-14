@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        button {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voto Eletronico</h1>
+    Quantos anos vc tem: <input type="number" name="input" id="input"> <br>
+    <button id="butao">Confirmar</button>
+    <div id="res">
+
+    </div>
+    <script>
+        var res = document.body.querySelector('div#res')
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var idade_txt = document.body.querySelector('input#input')
+            var idade = Number(idade_txt.value)
+
+            if (idade < 16) {
+                res.innerHTML = `${idade} Anos <br>`
+                res.innerHTML += `Não Vota`
+            }
+            else if (idade < 17 || idade >= 60) {
+                res.innerHTML = `${idade} Anos <br>`
+                res.innerHTML += `Voto Opicional`
+            }
+            else {
+                res.innerHTML = `${idade} Anos <br>`
+                res.innerHTML += `Voto Obrigatorio`
+            }
+        }
+    </script>
+</body>
+</html>

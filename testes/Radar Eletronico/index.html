@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            margin: 15px;
+        }
+        input {
+            width: 100px;
+        }
+        #txt1 {
+            color: red;
+        }
+        #txt2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Radar</h1>
+    <input type="number" name="num" id="num-1"><strong>Km/h</strong> <br>
+    <button id="butao">Confirmar...</button> <br>
+    
+    <script>
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var max = Number(80)
+            var corpo = document.body
+
+            var num1 = document.body.querySelector('input#num-1')
+            var num = Number(num1.value)
+
+            if (num > max) {
+                var valor = (num - max) * 7
+                corpo.innerHTML += `<strong id="txt1">Multado por excesso de velocidade</strong><br><strong>Valor a pagar R$${valor},00</strong>`
+            }
+            else {
+                corpo.innerHTML += `<strong id="txt2">Tudo Ok<br>Digira sempre com cinto de segurança</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

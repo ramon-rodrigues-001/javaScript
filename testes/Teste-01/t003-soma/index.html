@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        input {
+            width: 120px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 0px 10px;
+        }
+        div {
+            margin: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Dois Numeros</h1>
+    <input type="number" name="num" id="num-01"> +
+    <input type="number" name="num" id="num-02">
+    <button onclick="clicar()">Somar</button>
+    <div id="res">
+        Resultado...
+    </div>
+
+    <script>
+        function clicar() {
+            var res = document.body.querySelector('div#res')
+
+            var inp_01 = document.body.querySelector('input#num-01')
+            var inp_02 = document.body.querySelector('input#num-02')
+            var n1 = Number(inp_01.value)
+            var n2 = Number(inp_02.value)
+            var soma = n1 + n2
+
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>`
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Dragon;
+    src: url(fonts/eg_dragon_caps/Dragon.otf.otf) format('opentype'), url(fonts/eg_dragon_caps/Dragon.ttf.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: 17px sans-serif;
+}
+
+body {
+    font: normal 1em Arial, sans-serif;
+    background-color: #e2e4e6;
+    display: flex;
+}
+h1 {
+    width: 100%;
+    font: bold 2.2em Georgia, Times, 'Times New Roman', serif;
+    margin: 5px ;
+    text-align: center;
+}
+h2 {
+    width: 100%;
+    font: bold 1.8em Georgia, Times, 'Times New Roman', serif;
+    margin: 5px ;
+    text-align: center;
+}
+h3 {
+    width: 100%;
+    font: bold 1.4em Georgia, Times, 'Times New Roman', serif;
+    margin: 5px ;
+    text-align: center;
+}
+h4 {
+    width: 100%;
+    font: bold 1em Georgia, Times, 'Times New Roman', serif;
+    margin: 5px ;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#top {
+    z-index: 2;
+    width: 50%;
+    height: 80px;
+}
+#top_2 {
+    width: 100%;
+    height: 45px;
+}
+
+#esquerda {
+    z-index: 5;
+    margin: 3px 10px;
+    border-radius: 3px;
+    position: fixed;
+    background-color: #e2e4e6;
+    width: 44%;
+    height: 100%;
+}
+#direita {
+    width: 53%;
+    margin: 0 auto;
+}
+
+#section_img_1 {
+    margin: 10px;
+}
+pre {
+    text-align: center;
+}
+
+header {
+    z-index: 2;
+    position: fixed;
+    margin: 0px;
+    padding: 0px 15px 0px 10px;
+    width: 50%;
+    display: flex;
+    height: 40px;
+    background-color: #e2e4e6;
+}
+header div {
+    background-color: #ffff;
+    margin: 5px auto;
+    height: 30px;
+    width: 32%;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+header div:hover {
+    background-color: #000000;
+}
+header h4 {
+    font-size: 12px;
+}
+
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000000;
+}
+header div:hover a {
+    color: rgb(255, 255, 255);
+}
+section {
+    background-color: #ffff;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.224);
+}
+footer {
+    padding: 8px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: black;
+    color: #ffff;
+    text-align: center;
+}
+footer div {
+    display: none;
+}
+footer:hover div {
+    display: block;
+}
+footer::after {
+    content: ' [Abrir]';
+    color: #727072;
+}
+img {
+    width: 100%;
+    height: 400px;
+}
+
+#draken {
+    font-family: Dragon,serif;
+}
+#logo {
+    text-align: center;
+    height: 10%;
+    margin: auto;
+    border-radius: 4px;
+    color: rgb(23, 23, 143);
+    background-color: #727072;
+}
+#logo p {
+    font:bolder 1.3em serif;
+}
+#logo strong {
+    font:bolder 1.9em serif;
+}
+
+#menus {
+    display: flex;
+}
+
+button {
+    margin: 5px;
+    width: 33%;
+    height: 40px;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: rgb(255, 255, 255);
+}

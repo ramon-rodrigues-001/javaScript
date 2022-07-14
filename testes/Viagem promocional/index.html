@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem</title>
+    <style>
+        #corpo {
+            margin: auto;
+            background-color: aqua;
+            width: 310px;
+            height: auto;
+            padding: 4px;
+        }
+        body {
+            text-align: center;
+        }
+        button{
+            margin: 20px;
+        }
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <h1>Viagem Promocional</h1>
+        <strong>Distancia <input type="number" name="num" id="num-1">km/h</strong> <br>
+        <button id="butao"><strong>Confirmar...</strong></button> <br>
+    </div>
+    <script>
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var corpo = document.body.querySelector('div#corpo')
+             
+            var num1 = document.body.querySelector('input#num-1')
+            var num = Number(num1.value)
+
+            if (num <= 200) {
+                corpo.innerHTML += `<strong>Valor da viagem R$${num / 2}</strong>`
+            }
+            else {
+                corpo.innerHTML += `<strong>Valor Promocional ${num / 2.1}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

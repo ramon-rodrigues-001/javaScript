@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wold</title>
+</head>
+<body>
+    Cor de fundo: <input type="text" id="input-txt-01" list="escolha-de-fundo">
+    <datalist id="escolha-de-fundo">
+        <option value="red"></option>
+        <option value="blue"></option>
+        <option value="black"></option>
+        <option value="white"></option>
+        <option value="aqua"></option>
+        <option value="yellow"></option>
+    </datalist>
+    <button onclick="clicar_01()">Confirmar</button> <br>
+    
+    Cor da font: <input type="text" id="input-txt-02" list="escolha-da-letra">
+    <datalist id="escolha-da-letra">
+        <option value="red"></option>
+        <option value="blue"></option>
+        <option value="black"></option>
+        <option value="white"></option>
+        <option value="aqua"></option>
+        <option value="yellow"></option>
+    </datalist>
+    <button onclick="clicar_02()">Confirmar</button>
+
+    <div id="div">
+        <h1>Texto</h1>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

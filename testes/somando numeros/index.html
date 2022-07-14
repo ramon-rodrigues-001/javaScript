@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Num</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ola, Mundo!!</h1>
+    <input type="number" name="num" id="num-1">
+    <input type="number" name="num" id="num-2"> <br>
+    <button id="butao"><strong>Confirmar...</strong></button> <br>
+
+    <script>
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var corpo = document.body
+
+            var num1 = document.body.querySelector('input#num-1')
+            var num2 = document.body.querySelector('input#num-2')
+            
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            corpo.innerHTML += `A Somas dos numeros ${n1} e ${n2} e ingual ${n1 + n2}`
+        }
+
+    </script>
+</body>
+</html>

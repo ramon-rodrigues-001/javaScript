@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de Dom</title>
+    <style>
+        * {
+            padding: 0;
+        }
+        body {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        p {
+            max-width: 700px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id="titulo">Teste com <strong>DOM</strong></h1>
+
+        <p id="p-01">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eos ab fuga, architecto ducimus commodi iure dignissimos esse quae quas veritatis voluptatum deleniti, facere impedit repellendus doloremque provident fugiat nesciunt.
+        </p>
+
+        <p id="p-02">
+            Click Aqui.
+        </p>
+    </section>
+    
+    <script>
+        var titulo = document.body.querySelector('h1#titulo')
+        var p_01 = document.body.querySelector('p#p-01')
+        var p_02 = document.body.querySelector('p#p-02')
+
+        document.body.style.background = 'blue'
+
+        titulo.style.color = 'red'
+
+        p_01.style.background = 'black'
+        p_01.style.color = 'white'
+        p_01.style.padding = '10px'
+
+        p_02.style.color = 'red'
+
+
+        alert(titulo.innerText)
+    </script>
+</body>
+</html>

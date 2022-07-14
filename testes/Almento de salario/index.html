@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almento de Salario</title>
+    <style>
+        input {
+            width: 80px;
+        }
+        #container {
+            margin: auto;
+            text-align: center;
+        }
+        button {
+            margin: 15px
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Almento de Salario</h1>
+        <strong>Valor Do Salario Atual: R$<input type="number" name="sala" id="salario">,00</strong> <br>
+        <button id="butao"><strong>Confirmar...</strong></button> <br>
+    </div>
+    <script>
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var salario = document.body.querySelector('input#salario')
+            var valor = Number(salario.value)
+
+            var corpo = document.body.querySelector('div#container')
+            
+            if (valor <= 1250) {
+                valor += valor * (15/100)
+            }
+            else {
+                valor += valor * (10/100)
+            }
+
+            corpo.innerHTML += `<strong>R$${valor}</strong>`
+        }
+    </script>
+</body>
+</html>

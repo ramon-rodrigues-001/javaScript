@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        input {
+            width: 120px;
+        }
+        div#res {
+            margin: 20px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>DETRAN</h1>
+    <p>Digite sua velocidade atual <br><strong>sem tirar a mão do volante</strong></p>
+    <input type="number" name="vel" id="vel"><strong>Km/h</strong>
+    <button id="butao">Confirmar</button>
+    <div id="res">
+
+    </div>
+
+    <script>
+        var res = document.body.querySelector('div#res')
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var vel_txt = document.body.querySelector('input#vel')
+            var vel = Number(vel_txt.value)
+
+            if (vel == 80) {
+                res.innerHTML = `A ${vel}Km/h <br>`
+                res.innerHTML += 'Favor Reduzir a velocidade <br>'
+            }
+            else if (vel > 80) {
+                res.innerHTML = `A ${vel}Km/h <br>`
+                res.innerHTML += `Voçe altrapassou o limite de velocidade de 80km/h <br>`
+                res.innerHTML += '<strong>MULTADO</strong> <br>'
+            }
+            else {
+                res.innerHTML = `A ${vel}Km/h <br>`
+                res.innerHTML +=  `Otimo continue assim <br>`
+            }
+
+            res.innerHTML += 'Utilize sempre sinto de segurança'
+        }
+    </script>
+</body>
+</html>

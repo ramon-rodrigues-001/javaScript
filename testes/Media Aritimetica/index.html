@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            margin: 15px;
+        }
+        input {
+            margin: 3px;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ola, Mundo!!</h1>
+    <strong>1° Nota</strong><input type="number" name="num" id="num-1"> <br>
+    <strong>2° Nota</strong><input type="number" name="num" id="num-2">
+    <br><button id="butao">Confirmar...</button><br>
+    
+    <script>
+        var butao = document.body.querySelector('button#butao')
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+            var corpo = document.body
+
+            var n1 = document.body.querySelector('input#num-1')
+            var n2 = document.body.querySelector('input#num-2')
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+
+            corpo.innerHTML += `<strong>A media do aluno é ${(num1+num2) / 2}</strong>`
+        }
+    </script>
+</body>
+</html>

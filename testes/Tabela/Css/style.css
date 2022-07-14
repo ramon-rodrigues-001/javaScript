@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: solid 5px black;
+    border-collapse: collapse; 
+    margin: 5px auto;
+    width: 500px;
+}
+
+caption {
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+table th, td {
+    border: solid 1px black;
+}
+
+thead th, tfoot {
+    background-color: rgb(44, 38, 38);
+    color: white;
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+}
+
+nav {
+    margin: 20px;
+    text-align: center;
+}
+
+nav button {
+    font-size: 1.1em;
+    margin: 10px;
+    padding: 2px;
+}
+
+nav input#input-nome {
+    text-align: center;
+}
+nav input#nota-01 {
+    text-align: center;
+    width: 100px;
+}
+nav input#nota-02 {
+    text-align: center;
+    width: 100px;
+}
