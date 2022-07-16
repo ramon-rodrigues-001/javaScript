@@ -1,1 +1,0 @@
-var idade = Number('18')
