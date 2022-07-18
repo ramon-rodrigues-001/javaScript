@@ -1,7 +1,7 @@
 var res = document.body.querySelector('div#res')
 
-var butao = document.querySelector('button#butao')
-butao.addEventListener('click', clicar)
+var butao = document.querySelector('button#butao')       //Butão
+butao.addEventListener('click', clicar)                  //Chamado da função
 
 function clicar() {
     res.innerHTML = ''
