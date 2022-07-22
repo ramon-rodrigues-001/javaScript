@@ -29,7 +29,7 @@ butao_adicionar.addEventListener('click', function (){
 
 var butao_mostrar = document.querySelector('button#mostrar')
 butao_mostrar.addEventListener('click', function(){
-    
+
     var soma = Number(0)
 
     if (lista.length == 0){
