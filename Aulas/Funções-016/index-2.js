@@ -1,10 +1,18 @@
-function fato(n) {
-    if (n == 1) {
+// UMA FUNÇÃO DENTRO DE UMA VARIAVEL
+// É bem simples basta prestar atenção querido eu do foturo
+
+
+var fatorial = function fato(x) {
+    if (x == 1) {
         return 1
     }
     else {
-        return n * fato(n-1)
+        soma = x
+        for (var c = x-1; c > 1; c--) {
+            soma *= c
+        }
+        return soma
     }
 }
 
-console.log(fato(5))
+console.log(fatorial(5))

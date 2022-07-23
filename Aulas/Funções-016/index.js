@@ -1,4 +1,4 @@
-function impar(n) {
+function impar(n=0) {
     if (n % 2 == 0) {
         return "par"
     }
